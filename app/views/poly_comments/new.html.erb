@@ -1,0 +1,13 @@
+<h1>New Polycomment</h1>
+
+<%= form_with model: @comment  do |form| %>
+  <%= form.hidden_field :commentable_type, value: @commentable_type %>
+  <%= form.hidden_field :commentable_id, value: @commentable_id %>
+
+  <div>
+    <%= form.label :context, "Comment:" %>
+    <%= form.text_area :context %>
+  </div>
+
+  <%= form.submit "Create Comment" %>
+<% end %>

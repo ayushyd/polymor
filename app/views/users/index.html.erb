@@ -1,0 +1,8 @@
+<%@users.each do |user|%>
+<%=user.name%><br>
+<%=user.phone%><br>
+<%= link_to "show", user_path(id: user.id)%>
+<%=link_to "edit", edit_user_path(id: user.id)%>
+<%end%>
+
+<%=link_to "new_user", new_user_path%>

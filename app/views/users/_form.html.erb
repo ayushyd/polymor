@@ -1,0 +1,16 @@
+<%=form_with(model: @user) do |form|%>
+<div class="container">
+<%=form.label :name%>
+<%=form.text_field :name, placeholder: "name"%>
+</div>
+
+<div class="container">
+<%=form.label :phone%>
+<%=form.text_field :phone, placeholder: "phone"%>
+</div>
+
+<div class="container">
+<%=form.submit "new_user"%>
+</div>
+
+<%end%>
